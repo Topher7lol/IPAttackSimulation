@@ -1,6 +1,5 @@
 import time
 import socket, threading
-wait = time.sleep()
 
 e = False
 percentage = 1
@@ -11,8 +10,8 @@ def print_percent():
     while e:
         percentage += 1
         print(f"{percentage}% Done...")
-        wait(0.1)
-    wait(10)
+        time.sleep(0.1)
+    time.sleep(10)
     e = False
 
 
@@ -29,7 +28,7 @@ def TCP_connect(ip, port_number, delay, output):
         output[port_number] = ''
 
 
-def scan_ports(host_ip, delay):
+def scan_ports(ip, delay):
 
     threads = []
     output = {}
@@ -58,30 +57,30 @@ def scan_ports(host_ip, delay):
 def main():
     ip = input("Enter IP To Ping: ")
     print(f"Entered. Verifying IP {ip}.")
-    wait(0.86)
+    time.sleep(0.86)
     print(f"{ip} Verifyed. Brute-Force Accessing {ip}")
-    wait(1.2)
+    time.sleep(1.2)
     print(f"Scanning {ip} For Open Ports.")
     delay = 30
     scan_ports(ip, delay)
-    wait(30)
+    time.sleep(30)
     print("Finished Scanning For Open Ports.")
-    wait(0.1)
+    time.sleep(0.1)
     print(f"$ init connection @Server {ip}")
-    wait(0.56)
+    time.sleep(0.56)
     print(f"Establishing A Secure Connection To {ip} Through Open Port.")
-    wait(2.43)
+    time.sleep(2.43)
     print(f"Connected To {ip} Successfully!")
-    wait(1.23)
+    time.sleep(1.23)
     print("Connecting To Man-In-The-Middle Network...")
-    wait(2.46)
+    time.sleep(2.46)
     print("Securing LOnion Network...")
-    wait(3.72)
+    time.sleep(3.72)
     print("LOnion Network Connected!")
-    wait(0.76)
+    time.sleep(0.76)
     print("Connecting Via LOnion VPN")
     percentage()
-    wait(11.58)
+    time.sleep(11.58)
     print("Done! Connecting The Following Attacks Via The IP Address: ")
     print("Port Injection")
     print("IP Fragmenting")
