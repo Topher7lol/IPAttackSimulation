@@ -86,3 +86,6 @@ def main():
     print("IP Fragmenting")
     print("DDoS")
     print("MiTM")
+
+if __name__ == '__main__':
+    main()
