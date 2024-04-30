@@ -34,7 +34,7 @@ def scan_ports(ip, delay):
     output = {}
 
     for i in range(10000):
-        t = threading.Thread(target=TCP_connect, args=(host_ip, i, delay, output))
+        t = threading.Thread(target=TCP_connect, args=(ip, i, delay, output))
         threads.append(t)
 
     for i in range(10000):
